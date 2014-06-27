@@ -1,0 +1,57 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+   <title>Map my Travels</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+      <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8JgvOWqOg-IR3Z_T57Ifp_D857BxBcAs">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-34.397, 150.644),
+          zoom: 8
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+
+
+<body>
+    <div id="map-canvas"/>
+  <header>
+      <img id="logo" src='Public/Images/mylist.jpg' width='200' />
+  </header>
+    
+  <div id="container">
+      <h1>Wish List</h1>
+      <ol id="items">
+
+        <!-- Items will be added here -->
+      </ol>
+      <span class="total"></span>
+      <br/>
+      <input type="text" id="item"/>
+      <button id="add-to-list">Add to list</button>
+  </div>
+    
+  <footer>
+      <div id="content"> by Emma Shavick</div>
+  </footer>
+</body>
+</html>
+
